@@ -1,0 +1,303 @@
+.milestone-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.milestone-header h1 {
+  color: #2d79f3;
+  margin-bottom: 0.5rem;
+}
+
+.milestone-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.current-status {
+  margin-bottom: 3rem;
+}
+
+.status-card {
+  background: #f8f9fa;
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(45, 121, 243, 0.1);
+  transition: all 2s ease;
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+}
+
+.status-card h2 {
+  color: #2d79f3;
+  margin-bottom: 1.5rem;
+}
+
+.status-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 15px;
+  transition: all 2s ease;
+}
+
+.status-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(45, 121, 243, 0.1);
+}
+
+.status-item span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.status-item strong {
+  color: #2d79f3;
+  font-size: 1.5rem;
+}
+
+.badges-section {
+  margin-bottom: 3rem;
+}
+
+.badges-section h2 {
+  color: #2d79f3;
+  margin-bottom: 1.5rem;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* For screens that can fit 4 or more badges per row */
+@media (min-width: 900px) {
+  .badges-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* For screens that can fit exactly 3 badges per row */
+@media (min-width: 700px) and (max-width: 899px) {
+  .badges-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For screens that can fit exactly 2 badges per row */
+@media (min-width: 500px) and (max-width: 699px) {
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ensure the last row is centered when there are fewer items */
+.badges-grid::after {
+  content: '';
+  grid-column: span 1;
+}
+
+.badge-card {
+  background: #f8f9fa;
+  border-radius: 25px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 2s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.badge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(45, 121, 243, 0.2);
+}
+
+.badge-icon-wrapper {
+  margin-bottom: 1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: all 2s ease;
+}
+
+.badge-card:hover .badge-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.badge-icon.bronze {
+  color: #cd7f32;
+}
+
+.badge-icon.silver {
+  color: #c0c0c0;
+}
+
+.badge-icon.gold {
+  color: #ffd700;
+}
+
+.badge-icon.platinum {
+  color: #00a2ff;
+  filter: drop-shadow(0 0 10px rgba(0, 162, 255, 0.5));
+}
+
+.badge-icon.diamond {
+  color: #b9f2ff;
+  filter: drop-shadow(0 0 10px rgba(185, 242, 255, 0.5));
+}
+
+.badge-card h3 {
+  color: #2d79f3;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.badge-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.badge-card.achieved {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 100%);
+  border: 2px solid #2d79f3;
+}
+
+.achieved-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #2d79f3;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  transform: rotate(15deg);
+  box-shadow: 0 2px 5px rgba(45, 121, 243, 0.3);
+}
+
+.progress-info {
+  background: #f8f9fa;
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(45, 121, 243, 0.1);
+}
+
+.progress-info h2 {
+  color: #2d79f3;
+  margin-bottom: 1rem;
+}
+
+.progress-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.progress-info li {
+  color: #666;
+  padding: 1rem;
+  background: white;
+  border-radius: 15px;
+  transition: all 2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.progress-info li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(45, 121, 243, 0.1);
+}
+
+/* Dark mode styles */
+.dark-mode .milestone-container {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.dark-mode .milestone-header h1 {
+  color: #4a9eff;
+}
+
+.dark-mode .milestone-header p {
+  color: #ccc;
+}
+
+.dark-mode .status-card {
+  background: #2d2d2d;
+}
+
+.dark-mode .status-item {
+  background: #1a1a1a;
+}
+
+.dark-mode .status-item span {
+  color: #ccc;
+}
+
+.dark-mode .status-item strong {
+  color: #4a9eff;
+}
+
+.dark-mode .badge-card {
+  background: #2d2d2d;
+}
+
+.dark-mode .badge-card h3 {
+  color: #4a9eff;
+}
+
+.dark-mode .badge-card p {
+  color: #ccc;
+}
+
+.dark-mode .badge-card.achieved {
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  border-color: #4a9eff;
+}
+
+.dark-mode .achieved-tag {
+  background: #4a9eff;
+}
+
+.dark-mode .progress-info {
+  background: #2d2d2d;
+}
+
+.dark-mode .progress-info h2 {
+  color: #4a9eff;
+}
+
+.dark-mode .progress-info li {
+  background: #1a1a1a;
+  color: #ccc;
+}

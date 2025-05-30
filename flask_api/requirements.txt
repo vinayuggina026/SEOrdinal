@@ -1,0 +1,8 @@
+flask
+torch
+transformers
+sentencepiece
+git+https://github.com/openai/whisper.git
+pytrends
+accelerate
+scikit-learn

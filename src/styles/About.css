@@ -1,0 +1,99 @@
+.about-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 140px);
+  margin-top: 4rem;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-intro,
+.about-mission,
+.about-values,
+.about-features {
+  margin-bottom: 2.5rem;
+}
+
+.about-section h2 {
+  color: #007bff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section ul li {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  padding-left: 0;
+}
+
+.about-section ul li::before {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+
+  .about-content {
+    padding: 1.5rem;
+  }
+
+  .about-section h1 {
+    font-size: 2rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .about-content {
+    padding: 1rem;
+  }
+
+  .about-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.3rem;
+  }
+}
